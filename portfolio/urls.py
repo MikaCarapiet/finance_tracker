@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
+from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.index),
     path('finance_tracker/',include('finance_tracker.urls')),
     path('users/',include('users.urls')),
     path('__debug__/',include('debug_toolbar.urls')),
