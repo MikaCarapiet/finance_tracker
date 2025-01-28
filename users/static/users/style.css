@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    background-color: #1F2937;
+    /* Dark background */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* Full height for proper flex alignment */
+}
+
+/* Header */
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    background-color: #1F2937;
+    /* Match dark theme */
+    color: white;
+}
+
+.header-logo {
+    font-size: 36px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.links {
+    display: flex;
+    gap: 8px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding: 4px;
+}
+
+a:hover {
+    background-color: #2A3442;
+    border-radius: 4px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    /* Allow content to expand and fill available space */
+    display: flex;
+    justify-content: center;
+    /* Horizontally center */
+    align-items: center;
+    /* Vertically center */
+    background-color: #1F2937;
+    /* Match body background */
+}
+
+/* Modal */
+.modal {
+    background: white;
+    width: 480px;
+    padding: 32px;
+    /* Add padding for internal spacing */
+    border-radius: 10px;
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Form Styling */
+.modal form {
+    display: flex;
+    flex-direction: column;
+    /* Stack inputs and buttons */
+    gap: 16px;
+    /* Add spacing between elements */
+}
+
+.modal form h2 {
+    margin-bottom: 24px;
+    /* Add spacing below the title */
+    font-weight: 700;
+    color: #1F2937;
+}
+
+input[type=email],
+input[type=password],
+input[type=text] {
+    border: 1px solid #ccc;
+    /* Add a slight border */
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 100%;
+    /* Ensure it takes the modal's width */
+    box-sizing: border-box;
+    /* Prevent overflow due to padding */
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: #1F2937;
+    /* Dark button background */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin-top: 8px;
+    /* Add spacing above buttons */
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover {
+    background-color: #3A4750;
+    /* Slightly lighter on hover */
+}
+
+/* Footer */
+.footer {
+    background-color: #FFFFFF;
+    color: #1F2937;
+    padding: 24px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    /* Prevent footer from growing/shrinking */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .modal {
+        width: 90%;
+        /* Reduce width on smaller screens */
+    }
+}

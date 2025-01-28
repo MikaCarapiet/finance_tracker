@@ -9,12 +9,31 @@
 
 </head>
 <body>
-    <div id="container" class="register">
-        <form class="form-with-validation" action="/users/register/" method="post">
-            {% csrf_token %}
-            {{ form }}
-            <button>Submit</button>
-        </form>
+    <div class="header">
+        <div class="header-bar">
+            <div class="header-logo">
+                NF<u>Ai</u>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a class="topmenu" href="">Home</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="modal">
+            <form class="form-with-validation" action="/users/register/" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        this project is spearheaded and single-handedly created by Mickael Carapiet.
     </div>
 </body>
 </html>

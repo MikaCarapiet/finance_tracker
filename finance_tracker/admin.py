@@ -1,7 +1,10 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import User, Category, Account, Expense, Income, RecurringTransaction, Goal, Investment, Budget, Notification
+from .models import Category, Account, Expense, Income, RecurringTransaction, Goal, Investment, Budget, Notification
 from django.core.validators import MinValueValidator
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 class CustomUserAdmin(UserAdmin):
     model = User

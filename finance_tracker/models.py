@@ -1,6 +1,9 @@
 from django.db import models
 from django.core.validators import MinValueValidator
-from users.models import User
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+
 class Category(models.Model):
     # Decided to go with one category model for consistency in models
     class Meta:
