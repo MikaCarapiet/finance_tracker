@@ -34,13 +34,13 @@ body {
 }
 
 a {
-    color: white;
+    color: #1F2937;
     text-decoration: none;
     padding: 4px;
 }
 
 a:hover {
-    background-color: #2A3442;
+    background-color: #3c434c;
     border-radius: 4px;
 }
 

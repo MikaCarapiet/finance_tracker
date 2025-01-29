@@ -63,7 +63,7 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,6 +109,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'users.backends.EmailBackend',  # Custom email-based authentication
+    'django.contrib.auth.backends.ModelBackend',  # Keep default for admin login
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

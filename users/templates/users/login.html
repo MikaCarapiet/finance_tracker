@@ -16,7 +16,7 @@
             </div>
             <div class="links">
                 <ul>
-                    <li><a class="topmenu" href={% url "finance_tracker:index" %}>Home</a></li>
+                    <li><a class="topmenu"href={% url "finance_tracker:index" %}>Home</a></li>
 
 
                 </ul>
@@ -25,13 +25,14 @@
     </div>
     <div class="content">
         <div class="modal">
-            <form class="form-with-validation" action="/users/register/" method="post">
+            <form class="form-with-validation" action="/users/login/" method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button>Submit</button>
-            </form>
-            <a class="reg-link" href="{% url 'users:login' %}">Don't have an account? Register</a>
 
+                {{ form.as_p}}
+                <button>Submit</button>
+
+            </form>
+            <a class="reg-link" href="{% url 'users:register' %}">Don't have an account? Register</a>
         </div>
     </div>
     <div class="footer">
