@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Finance Tracker
+        {% endblock%}
+    </title>
+</head>
+<body>
+    <nav>
+        <div class="header-logo">
+            NF<u>Ai</u>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a class="dashboard-nav" href={% url "finance_tracker:dashboard" %}>Dashboard</a></li>
+                <li><a class="dashboard-nav" href={% url "finance_tracker:transactions" %}>Transactions</a></li>
+                <li><a class="dashboard-nav" href={% url "finance_tracker:cashflow" %}>Cash flow</a></li>
+                <li><a class="dashboard-nav" href={% url "finance_tracker:accounts" %}>Accounts</a></li>
+                <li><a class="dashboard-nav" href={% url "finance_tracker:investments" %}>Investments</a></li>
+                <li><a class="dashboard-nav" href={% url "finance_tracker:categories" %}>Categories</a></li>
+                <li><a class="dashboard-nav" href={% url "finance_tracker:recurring" %}>Recurrings</a></li>
+            </ul>
+            <div> MY ACCOUNTS </div>
+            
+        </nav>
+    <main>
+        {%block content %}
+        {%endblock%}
+</body>
+</html>
