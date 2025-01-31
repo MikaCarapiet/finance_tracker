@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'finance_tracker',
     'users',
     'debug_toolbar',
+    'crispy_forms',
 ]
 
 INTERNAL_IPS = [
